@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import java.util.ArrayList;
 
 /**
  * Created by user on 23/01/2018.
@@ -13,8 +14,8 @@ import android.widget.TextView;
 
 public class FastCarsAdaptor extends ArrayAdapter<Car> {
 
-    public FastCarsAdaptor(Context context, ArrayAdapter<Car> cars){
-        super(context, 0, cars);
+    public FastCarsAdaptor(Context context, ArrayList<Car> cars){
+        super(context,0, cars);
 
     }
 
@@ -40,4 +41,6 @@ public class FastCarsAdaptor extends ArrayAdapter<Car> {
         zeroToSixty.setText(currentCar.getZeroToSixty().toString());
 
         return listItemView;
+
+    }
 }

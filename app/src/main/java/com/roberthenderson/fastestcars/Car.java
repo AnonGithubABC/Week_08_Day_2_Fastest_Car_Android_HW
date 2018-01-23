@@ -9,9 +9,9 @@ class Car {
     private Integer ranking;
     private String make;
     private String model;
-    private double zeroToSixty;
+    private Double zeroToSixty;
 
-    public Car (Integer ranking, String make, String model, double zeroToSixty) {
+    public Car (Integer ranking, String make, String model, Double zeroToSixty) {
         this.ranking = ranking;
         this.make = make;
         this.model = model;
@@ -31,7 +31,7 @@ class Car {
             return this.model;
         }
 
-        public double getZeroToSixty(){
+        public Double getZeroToSixty(){
             return this.zeroToSixty;
         }
 
