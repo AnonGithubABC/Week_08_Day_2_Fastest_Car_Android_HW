@@ -40,6 +40,8 @@ public class FastCarsAdaptor extends ArrayAdapter<Car> {
         TextView zeroToSixty = listItemView.findViewById(R.id.zeroToSixty);
         zeroToSixty.setText(currentCar.getZeroToSixty().toString());
 
+        listItemView.setTag(currentCar);
+
         return listItemView;
 
     }

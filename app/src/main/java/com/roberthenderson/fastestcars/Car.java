@@ -1,10 +1,12 @@
 package com.roberthenderson.fastestcars;
 
+import java.io.Serializable;
+
 /**
  * Created by user on 23/01/2018.
  */
 
-class Car {
+class Car implements Serializable{
 
     private Integer ranking;
     private String make;

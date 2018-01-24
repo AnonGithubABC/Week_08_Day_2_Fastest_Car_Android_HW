@@ -1,7 +1,10 @@
 package com.roberthenderson.fastestcars;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -19,4 +22,16 @@ public class MainActivity extends AppCompatActivity {
         ListView listView = findViewById(R.id.list_view);
         listView.setAdapter(carsAdaptor);
     }
+
+    public void onListItemClick(View listItem) {
+        Car car = (Car) listItem.getTag();
+        Log.d("Car Model: ", car.getModel());
+
+        Intent intent = new Intent(this, CarActivity.class); //NEW
+        intent.putExtra("car", car); //NEW
+        startActivity(intent); //NEW
+    }
+
+
+
 }
